@@ -1,4 +1,4 @@
-export class DinoIpsum {
+export class doctorLookup {
   getIpsum(paragraphs, words) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
