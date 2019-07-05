@@ -1,5 +1,5 @@
 export class doctorLookup {
-  getIpsum(paragraphs, words) {
+  getdoctor(paragraphs, words) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
       let url = `http://dinoipsum.herokuapp.com/api/?format=html&paragraphs=${paragraphs}&words=${words}`;
