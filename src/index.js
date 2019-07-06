@@ -1,19 +1,17 @@
-import { DinoIpsum } from './dino-ipsum.js';
+import { DoctorLookup } from './doctor-lookup.js';
 import $ from 'jquery';
 
 $(document).ready(function() {
-  $('#dinoSubmit').click(function() {
-    let numOfParagraphs = $('#paragraphs').val();
-    let numOfWords = $('#words').val();
+  $('#inputSubmit').click(function() {
+    let symptom = $('#medicalIssue').val();
 
-
-    let dinoIpsum = new DinoIpsum();  // create instance of WeatherService class
-    let promise = dinoIpsum.getIpsum(numOfParagraphs, numOfWords);  // call the instance method and pass in user input
+    let doctorLookup = new DoctorLookup();  // create instance of WeatherService class
+    let promise = doctorLookup.getDoctor(symptom);  // call the instance method and pass in user input
 
     promise.then(function(response) {
       // const body = JSON.parse(response);
       console.log(response);
-      $('.showIpsum').html(response);
+      $('.showDoctors').html(response);
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
     });
