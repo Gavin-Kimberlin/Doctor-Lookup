@@ -5,11 +5,10 @@ $(document).ready(function() {
   $('#inputSubmit').click(function() {
     let symptom = $('#medicalIssue').val();
 
-    let doctorLookup = new DoctorLookup();  // create instance of WeatherService class
-    let promise = doctorLookup.getDoctor(symptom);  // call the instance method and pass in user input
+    let doctorLookup = new DoctorLookup();
+    let promise = doctorLookup.getDoctor(symptom);
 
     promise.then(function(response) {
-      // const body = JSON.parse(response);
       console.log(response);
       $('.showDoctors').html(response);
     }, function(error) {
