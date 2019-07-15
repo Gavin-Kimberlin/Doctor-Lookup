@@ -10,6 +10,7 @@ $(document).ready(function() {
 
     promise.then(function(response) {
       console.log(response);
+      let body = JSON.parse(response);
       $('.showDoctors').html(response);
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
