@@ -1,4 +1,4 @@
-# Super Galactic Age Calculator
+# Doctor ookup
 
 #### Week Six Project, 07/05/19
 
