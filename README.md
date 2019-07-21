@@ -1,4 +1,4 @@
-# Doctor ookup
+# Doctor Lookup
 
 #### Week Six Project, 07/05/19
 
